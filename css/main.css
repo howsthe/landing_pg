@@ -1,0 +1,61 @@
+@charset "UTF-8" ;
+
+/* reset */
+* {margin: 0;padding: 0;}
+li {list-style: none;}
+a {color: #222;text-decoration: none;}
+img {vertical-align: top;}
+body {
+    --mainC1:#003f73;
+
+    --tectC1:#001122;
+
+    --textC2:#888;
+}
+
+.center_box {max-width: 1400px;margin: 0 auto;}
+
+
+header {min-height: 85px;display: flex;align-items: center;}
+header .center_box{display: flex;justify-content: space-between;}
+header .center_box h1{display: flex;align-items: center;}
+header .center_box nav {display: flex;align-items: center;}
+header .center_box nav .gnb {display: flex;font-size: 18px;}
+header .center_box nav .gnb li {}
+header .center_box nav .gnb li a {padding: 10px 40px;display: block;}
+
+header .center_box nav .gnb li a:hover {color: #000;font-weight: bold;}
+
+
+#visual {/* background: url("../images/main1.png");background-size: cover;padding-top: 38.38%; */position: relative;overflow: hidden;}
+#visual img {width: 100%;}
+
+#visual .centerbox {position: absolute;top: 50%;left: 50%;transform: translate(-70%, -50%);}
+#visual .centerbox .textbox {word-break: keep-all;}
+#visual .centerbox .textbox strong {font-size: 3.65vw;color: #fff;line-height: 1.3;}
+#visual .centerbox .textbox p {font-size:20px;color: #fff;margin-top: 30px;}
+
+
+/* 모바일 0 ~ 880 */
+@media screen and (max-width:880px) {
+    header .center_box {flex-direction: column;align-items: center;}
+    header .center_box .gnb li {font-size: 16px;}
+
+    #visual {background: #000e22;padding-top: 100px;}
+    #visual .centerbox {width: 90%;transform: translate(-50%,-50%);}
+    #visual .centerbox .textbox strong {font-size: 30px;}
+    #visual .centerbox .textbox p {font-size: 16px;display: none;}
+}
+
+
+#section_box section > div {padding: 100px 0;}
+#section_box section > div h2 {font-size: 40px;text-align: center;;color: var(--mainC1);margin-bottom: 50px;}
+
+section .part1_1 {}
+section .part1_1 .content_box {display: flex;justify-content: space-between;}
+section .part1_1 .content_box li {}
+section .part1_1 .content_box li figure {border-radius: 15px;overflow: hidden;}
+section .part1_1 .content_box li .title {font-size: 34px;margin: 0 auto;margin: 20px 0;color: var(--tectC1);text-align: center;}
+section .part1_1 .content_box li .content {}
+section .part1_1 .content_box li .content li {font-size: 20px;color: var(--textC2);position: relative;padding-left: 20px;}
+section .part1_1 .content_box li .content li:before {content: "";width: 4px;height: 4px;border-radius: 50%;background: var(--textC2);position: absolute;top: 12px;left: 0;}
